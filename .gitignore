@@ -1,8 +1,9 @@
 data/evidence.json
 .idea
-
-models
-.env
-
-venv
 .venv
+venv
+
+models/models
+models/tokenizers
+
+.env
