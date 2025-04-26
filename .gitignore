@@ -1,2 +1,8 @@
 data/evidence.json
 .idea
+
+models
+.env
+
+venv
+.venv
