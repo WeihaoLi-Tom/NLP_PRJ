@@ -5,5 +5,4 @@ venv
 
 models/models
 models/tokenizers
-
 .env
