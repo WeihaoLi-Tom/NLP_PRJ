@@ -180,7 +180,7 @@
     ]
   },
   "claim-2184": {
-    "claim_label": "DISPUTED",
+    "claim_label": "SUPPORTS",
     "evidences": [
       "evidence-224942",
       "evidence-1113919"
@@ -688,7 +688,7 @@
     ]
   },
   "claim-1222": {
-    "claim_label": "NOT_ENOUGH_INFO",
+    "claim_label": "SUPPORTS",
     "evidences": [
       "evidence-856068",
       "evidence-7473",
@@ -1072,7 +1072,7 @@
     ]
   },
   "claim-1928": {
-    "claim_label": "REFUTES",
+    "claim_label": "SUPPORTS",
     "evidences": [
       "evidence-1099128",
       "evidence-529248",
