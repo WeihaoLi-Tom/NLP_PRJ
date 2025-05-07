@@ -1,2 +1,5 @@
 data/evidence.json
 .idea
+evidence_hnsw.bin
+venv
+models
