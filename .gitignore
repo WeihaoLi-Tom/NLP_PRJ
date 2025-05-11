@@ -3,3 +3,8 @@ data/evidence.json
 evidence_hnsw.bin
 venv
 models
+.env
+*.gz
+*.npy
+*.ipynb
+*.ipynb_checkpoints
