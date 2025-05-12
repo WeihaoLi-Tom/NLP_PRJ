@@ -8,3 +8,5 @@ models
 *.npy
 *.ipynb
 *.ipynb_checkpoints
+
+/cross_encoder_model*
