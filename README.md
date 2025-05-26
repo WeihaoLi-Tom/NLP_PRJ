@@ -1,47 +1,10 @@
-# COMP90042 Project Description
-
-Please check the **Lecture Recording first** if you have any questions about the Assignment 3 - Project **(Lecture 13 - Thursday, Apr 17, 2025)**
-
-This assignment can be done in teams of three. We strongly encourage healthy collaboration. See the [University of Melbourne Working in Groups Guide](https://students.unimelb.edu.au/academic-skills/resources/communicating-in-class/communicating-with-peers/working-in-groups). 
-If your team member does not contribute, please contact the lecturer ([Dr. Caren Han](mailto:caren.han@unimelb.edu.au?subject=[COMP90042]%20Project%20Group)) and explain the situation (e.g. by describing the contributions of each collaborator in your team). We strongly recommend starting work early so that you will have ample time to discover stumbling blocks and ask questions.
-
-You are free to design the architecture using any of the techniques learned from our lectures and labs (as long as they don't conflict with the Project Rules (see the below Important Notes Section). For training and evaluation, we provide you a benchmark dataset in a split of training, validation and test. You will use the training and validation set for training/validation while using the test set for leaderboard submission. 
-
-For this assignment, **instead of solely focusing on achieving higher performance, you should consider exploring novel architecture design and justify your decision processes**, as grading is by-and-large based on your research process rather than system performance (see grading details below).
 
 
-**Table of Contents**
-- [0. Important Dates (Very Important!!)](https://github.com/drcarenhan/COMP90042_2025?tab=readme-ov-file#-0-important-dates)
-- [1. DataSet](https://github.com/drcarenhan/COMP90042_2025?tab=readme-ov-file#-1-dataset)
-- [2. Important Notes](https://github.com/drcarenhan/COMP90042_2025?tab=readme-ov-file#-2-important-notes)
-- [3. Model Testing](https://github.com/drcarenhan/COMP90042_2025?tab=readme-ov-file#-3-testing-and-evaluation)
-- [4. Report Writing](https://github.com/drcarenhan/COMP90042_2025?tab=readme-ov-file#-4-report-writing)
-- [5. Project Submission Method and Grading](https://github.com/drcarenhan/COMP90042_2025?tab=readme-ov-file#-5-project-submission-method-and-grading)
-- [6. Peer Review](https://github.com/drcarenhan/COMP90042_2025?tab=readme-ov-file#-6-peer-review)
-- [7. Leaderboard](https://github.com/drcarenhan/COMP90042_2025?tab=readme-ov-file#-7-leaderboard)
-- [8. FAQ](https://github.com/drcarenhan/COMP90042_2025?tab=readme-ov-file#-8-faq)
-
-<br/>
-<br/>
 
 
-## <img src="https://em-content.zobj.net/thumbs/120/microsoft/319/calendar_1f4c5.png" width="30" /> 0. Important Dates
-The Important date for the Project can be summarised as follows:
-- **Project Specification Release Date**: 17 April 2025 
-- **Project Group Release Date**: 21 April 2025 
-<br/><code style="color:red">(ONLY IF YOU HAVE any group mates in prior, please submit [Project Group EOI](https://forms.gle/nwpobJUsQtdweuqP8). **NOT COMPULSORY. Project Group EOI Due Date**: 20 April 2025)</code>
-- **Project Final Submission Due**:  19 May 2025 **(NO extension will be given less than 2 days before deadline)**
-- **Project Peer Review Due**:  28 May 2025 **(NO extension will be given less than 2 days before deadline)**
-
-All deadlines are **11:59 PM (AEST, Melbourne Time)**.
-<br/>
-**Leaderboard(Optional)** The leaderboard is optional, and will run from 28 April to 17 May 2025, 11:59PM. The closing date is two days before the Final Submission due date.
-
-<br/>
 
 ## <img src="https://em-content.zobj.net/thumbs/120/samsung/349/card-file-box_1f5c3-fe0f.png" width="30" /> 1. DataSet
-| :exclamation:  You need to put the code that you conduct all actions for this section in the [ipynb template](https://colab.research.google.com/drive/1CjlVXdEsioH_iGOHUbmrhimTLRXGJIt0?usp=sharing) |
-|-----------------------------------------|
+
 
 The impact of climate change on humanity is a significant concern. However, the increase in unverified statements regarding climate science has led to a distortion of public opinion, underscoring the importance of conducting fact-checks on claims related to climate science. Consider the following claim and related evidence:
 
@@ -179,105 +142,13 @@ The example prediction file, dev-claims-baseline.json, is the output of a baseli
 Note that this is not a realistic baseline, and you might find that your system performs worse than it. The reason for this is that this baseline constructs its output in the following manner: (1) the claim labels are randomly selected; and (2) the set of evidence passages combines several randomly selected ground truth passages and several randomly selected passages from the knowledge source. We created such a ‘baseline’ because a true random baseline that selects a random set of evidence passages will most probably produce a zero F-score for evidence retrieval (and consequently zero for the harmonic mean of F-score and accuracy), and it won’t serve as a good diagnostic example to explain the metrics. To clarify, this baseline will not be used in any way for ranking submitted systems on the leaderboard, and is provided solely to illustrate the metrics and an example system output.
 
 
-<br/>
-
-
-## <img src="https://em-content.zobj.net/thumbs/120/facebook/355/page-facing-up_1f4c4.png" width="30" /> 4. Report Writing
-| :exclamation:  You MUST use the [ACL template](https://github.com/acl-org/acl-style-files) when writing your report.
-|-----------------------------------------|
-
-You must use LATEX for writing your report. You must include your group number under the title (using the \author field in LATEX and changing "review" to "final" to generate the final (sometimes called camera-ready) version. \usepackage[review]{acl} --> \usepackage[final]{acl}), but not your name. We will not accept reports that are longer than the stated limits below, or otherwise violate the style requirements.
-
-The report should be submitted as a PDF and contain **no more than five(5)** A4 pages of content, excluding  team contribution and references. An appendix is NOT allowed. Therefore, you should consider carefully the information that you want to include in the report to build a coherent and concise narrative.
-
-**The team name (Group Name) will be shared on the project Group Release Date - 21 April 2025**
-
------
-Below is a suggested report structure:
-
-**Title** The title of your project and Group Name
-
-**Abstract**. An abstract should concisely (less than 300 words) motivate the problem, describe your aims, describe your contribution, and highlight your main finding(s).
-
-**Introduction** The introduction explains the problem, why it’s difficult, interesting, or important, how and why current methods succeed/fail at the problem, and explains the key ideas of your approach and results. Though an introduction covers similar material as an abstract, the introduction gives more space for motivation, detail, and references to existing work and captures the reader’s interest.
-
-**Approach** This section details your approach(es) to the problem. For example, this is where you describe the architecture of your neural network(s), and any other key methods or algorithms.
-* You should be specific when describing your main approaches – you probably want to include equations and figures.
-* You should also describe your baseline(s). Depending on space constraints, and how standard your baseline is, you might do this in detail, or simply refer the reader to some other paper for the details.
-* If any part of your approach is original, make it clear (so we can give you credit!). For models and techniques that aren’t yours, provide references.
-* As you’re setting up equations, notation, and the like, be sure to agree on a fixed technical vocabulary (that you’ve defined, or is well-defined in the literature) before writing and use it consistently throughout the report! This will make it easier for the teaching team to follow and is nice practice for research writing in general.
-
-**Experiments**. This section contains the following. 
-* **Evaluation method**: If you’re defining your own metrics (for diagnostic purposes), be clear as to what you’re hoping to measure with each evaluation method (whether quantitative or qualitative, automatic or human-defined!), and how it’s defined.
-* **Experimental details**: Report how you ran your experiments (e.g., model configurations, learning rate, training time, etc.)
-
-**Results**: Report the quantitative results that you have found so far. Use a table or plot to compare results and compare against baselines. You must report dev results, and also test results if you participate in the leaderboard.
-When you write results, please be aware of the following questions: Are they what you expected?; Better than you expected?; Is It worse than you expected?; Why do you think that is?; What does that tell you about your approach?
-
-**Conclusion**. Summarise the main findings of your project, and what you have learnt. Highlight your achievements, and note the primary limitations of your work. If you like, you can describe avenues for future work.
-
-**Team contributions** (doesn't count towards the page limit) If you are a multi-person team, briefly describe the contributions of each member of the team.
-
-**References** (doesn't count towards the page limit) Your references section should be produced using BibTeX.
-
-**Note that We DO NOT MARK the report if it's not a faithful description of the implemented system (i.e. the submitted system is different to what is described in the report).**
-
 
 
 <br/>
 
+## <img src="https://em-content.zobj.net/source/skype/289/trophy_1f3c6.png" width="30" />4. Leaderboard
 
-## <img src="https://em-content.zobj.net/thumbs/120/whatsapp/326/envelope-with-arrow_1f4e9.png" width="30" /> 5. Project Submission Method and Grading
-**Submission:** LMS Assignment Submission Box will be opened in Week 9.
-
-**You Must Submit Two Files:**
-- **pdf file** (filename format: COMP90042_teamname.pdf): a report using the [ACL template](https://github.com/acl-org/acl-style-files).
-
-- **zip file** (filename format: COMP90042_teamname_resource.zip): A zip file that contains: **1)** ipynb file(s) (You MUST use this [ipynb template](https://colab.research.google.com/drive/1CjlVXdEsioH_iGOHUbmrhimTLRXGJIt0?usp=sharing)), and **2)** a README file to describe how to run the code if it's not apparent from the documentation in the ipynb files (optional), and **3)** any shell scripts that you use to run your code, e.g. to pre-install packages (optional). Note: you MUST NOT upload any data files or trained model checkpoints.
+[Here](https://www.codabench.org/competitions/7707/?secret_key=62a88bc5-d1ce-4514-8e4c-033cd61c90c7)
 
 
-**Your submissions will be graded as follows:**
-| Component  | Criteria | Description  | Marks |
-| ------------- | ------------- | ------------- | ------------- |
-| Writing  | Clarity  | Is the report well-written and well-structured?  | 5  |
-| Writing  | Tables/Figures  | Are tables and figures interpretable and used effectively?  | 4  |
-| Content  | Soundness  | Are the experiments sound? Are methods justified and used correctly?  | 7  |
-| Content  | Substance  | How much work is done? Is there enough substance?  | 5  |
-| Content  | Novelty  | How novel or ambitious are the techniques or methods?  | 5  |
-| Content  | Results  | Are the results and findings convincing? Are they well articulated?  | 5  |
-| Scholarship  | Citation  | Does the report cite relevant publications to drive decision making (e.g. to motivate design choices or to support findings)?   | 4 |
-| **Total**  |   |  | **35**  |
-
-
-**Leaderboard**
-
-The leaderboard submission is optional. There is no mark for the leaderboard.
-
-<br/>
-
-
-
-## <img src="https://em-content.zobj.net/source/whatsapp/390/clipboard_1f4cb.png" width="30" /> 6. Peer Review 
-The peer review will start **from the 22nd of May to the 28th of May**. 
-
-The peer review procedure will be shared in Week 9.
- 
-
-
-<br/>
-
-## <img src="https://em-content.zobj.net/source/skype/289/trophy_1f3c6.png" width="30" /> 7. Leaderboard
-
-The leaderboard submission is optional. There is no mark for the leaderboard.
-The Leaderboard link and Submission instruction will be announced on 28 April.
-
-
-<br/>
-
-## <img src="https://em-content.zobj.net/thumbs/120/google/350/person-raising-hand_1f64b.png" width="30" /> 8. FAQ
-**The FAQ will be updated based on the student's questions.
-
-For a better and more supportive learning environment, our team summarised the FAQs based on the topic and would like to share the following posts (with our teaching team’s answer).  Please check the FAQ summary.
-
-**FAQ Discussion Board Summary: [FAQ and Anwers Summary Link](https://edstem.org/au/courses/22012/discussion/2600395)**
 
